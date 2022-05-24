@@ -1,18 +1,22 @@
 /* RESETS */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap');
+
 * {
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
+
 .container {
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
 }
+
 .calculator {
   width: 400px;
 }
+
 input {
   padding: 1rem;
   width: 100%;
@@ -23,6 +27,7 @@ input {
   color: white;
   font-weight: 500;
 }
+
 ::placeholder {
   color: #fff;
   font-size: 1rem;
@@ -31,6 +36,7 @@ input {
 .buttons {
   width: 100%;
 }
+
 .buttons button {
   padding: 1rem;
   width: 25%;
@@ -40,12 +46,15 @@ input {
   font-weight: 500;
   font-size: 16px;
 }
+
 .buttons .zero {
   width: 50%;
 }
+
 button:nth-child(4n + 0) {
   background-color: rgba(255, 115, 0, 0.788);
 }
+
 button:nth-child(19) {
   background-color: rgba(255, 115, 0, 0.788);
 }
