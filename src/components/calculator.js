@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Calculator extends Component {
+class Calculator extends React.Component {
   render() {
     return (
       <div className="container">
         <div className="calculator">
           <form>
-            <input type="text" />
+            <input type="text" placeholder="0" />
           </form>
           <div className="buttons">
             <button type="button">AC</button>

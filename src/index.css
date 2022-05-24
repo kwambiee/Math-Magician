@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap');
 * {
   font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
 }
 .container {
   display: flex;
@@ -10,5 +11,25 @@
   justify-content: center;
 }
 .calculator {
-  width: 300px;
+  width: 400px;
+}
+input {
+  padding: 0.8rem;
+  width: 100%;
+  background-color: grey;
+  border: none;
+  outline: none;
+  text-align: end;
+}
+input[type='text'] {
+  color: #fff;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+}
+.buttons button {
+  padding: 0.8rem;
+  width: 25%;
 }
