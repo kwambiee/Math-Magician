@@ -14,22 +14,38 @@
   width: 400px;
 }
 input {
-  padding: 0.8rem;
+  padding: 1rem;
   width: 100%;
-  background-color: grey;
+  background-color: rgb(167, 164, 164);
   border: none;
   outline: none;
   text-align: end;
+  color: white;
+  font-weight: 500;
 }
-input[type='text'] {
+::placeholder {
   color: #fff;
+  font-size: 1rem;
 }
 
 .buttons {
   width: 100%;
-  display: flex;
 }
 .buttons button {
-  padding: 0.8rem;
+  padding: 1rem;
   width: 25%;
+  border-radius: 0;
+  background-color: rgba(233, 230, 230, 0.856);
+  border: 0.4px solid rgba(211, 209, 209, 0.973);
+  font-weight: 500;
+  font-size: 16px;
+}
+.buttons .zero {
+  width: 50%;
+}
+button:nth-child(4n + 0) {
+  background-color: rgba(255, 115, 0, 0.788);
+}
+button:nth-child(19) {
+  background-color: rgba(255, 115, 0, 0.788);
 }

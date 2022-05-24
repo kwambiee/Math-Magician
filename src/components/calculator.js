@@ -25,7 +25,9 @@ class Calculator extends React.Component {
             <button type="button">2</button>
             <button type="button">3</button>
             <button type="button">+</button>
-            <button type="button">0</button>
+            <button className="zero" type="button">
+              0
+            </button>
             <button type="button">&bull;</button>
             <button type="button">=</button>
           </div>
