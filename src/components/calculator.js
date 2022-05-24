@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-export class Calculator extends Component {
+class Calculator extends Component {
   render() {
     return (
-      <div>
-        <div>
+      <div className="container">
+        <div className="calculator">
           <form>
             <input type="text" />
           </form>
-          <div>
+          <div className="buttons">
             <button type="button">AC</button>
             <button type="button">+/-</button>
             <button type="button">%</button>

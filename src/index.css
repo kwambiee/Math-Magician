@@ -1,1 +1,14 @@
 /* RESETS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap');
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  width: 300px;
+}
