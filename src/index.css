@@ -28,7 +28,7 @@ input {
   font-weight: 500;
 }
 
-::placeholder {
+input[type='text'] {
   color: #fff;
   font-size: 1rem;
 }
