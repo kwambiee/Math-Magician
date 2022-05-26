@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[checkout MyApp]
+[Live Link](https://kwambiee.netlify.app/)
 
 ## Getting Started
 
