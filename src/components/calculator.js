@@ -9,6 +9,12 @@ class Calculator extends React.Component {
     this.handleOperator = this.handleOperator.bind(this);
   }
 
+  handleOperator(name) {
+    const object = this.state;
+    const result = calculate(object, name);
+    this.setState({ ...object, ...result });
+  }
+
   render() {
     const object = this.state;
     return (
