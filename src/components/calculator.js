@@ -18,17 +18,19 @@ class Calculator extends React.Component {
     this.handleCalculate = this.handleCalculate.bind(this);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps, prevState) {
     // Typical usage (don't forget to compare props):
     // calculate()
     const result = calculate(this.state.obj, this.state.buttonName);
-    this.setState({
-      obj: {
-        total: result.total,
-        next: result.next,
-        operation: result.operation,
-      },
-    });
+    if (this.state.buttonName !== prevState.buttonName) {
+      this.setState({
+        obj: {
+          total: result.total,
+          next: result.next,
+          operation: result.operation,
+        },
+      });
+    }
   }
 
   handleNumber(event) {
@@ -65,13 +67,16 @@ class Calculator extends React.Component {
   }
 
   render() {
+    const {
+      obj: { next, operation, total },
+    } = this.state;
     return (
       <div className="container">
         <div className="calculator">
           <div className="input">
-            {this.state.obj.next}
-            {this.state.obj.operation}
-            {this.state.obj.total}
+            {next}
+            {operation}
+            {total}
           </div>
           <div className="buttons">
             <button
