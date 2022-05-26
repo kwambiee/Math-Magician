@@ -5,145 +5,160 @@ import calculate from '../logic/calculate';
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      obj: {
-        total: null,
-        next: null,
-        operation: null,
-      },
-      buttonName: null,
-    };
-    this.handleNumber = this.handleNumber.bind(this);
+    this.state = { total: null, next: null, operation: null };
     this.handleOperator = this.handleOperator.bind(this);
-    this.handleCalculate = this.handleCalculate.bind(this);
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    // Typical usage (don't forget to compare props):
-    // calculate()
-    const result = calculate(this.state.obj, this.state.buttonName);
-    if (this.state.buttonName !== prevState.buttonName) {
-      this.setState({
-        obj: {
-          total: result.total,
-          next: result.next,
-          operation: result.operation,
-        },
-      });
-    }
-  }
-
-  handleNumber(event) {
-    if (this.state.obj.operation) {
-      this.setState((state) => ({
-        obj: {
-          ...state.obj,
-          next: `${state.obj.next || ''}${event.target.name}`,
-        },
-        buttonName: event.target.name,
-      }));
-    } else {
-      this.setState((state) => ({
-        obj: {
-          ...state.obj,
-          total: `${state.obj.total || ''}${event.target.name}`,
-        },
-        buttonName: event.target.name,
-      }));
-    }
-  }
-
-  handleOperator(event) {
-    this.setState((state) => ({
-      obj: { ...state.obj, operation: event.target.name },
-      buttonName: event.target.name,
-    }));
-  }
-
-  handleCalculate(event) {
-    this.setState({
-      buttonName: event.target.name,
-    });
+  handleOperator(name) {
+    const object = this.state;
+    const result = calculate(object, name);
+    this.setState({ ...object, ...result });
   }
 
   render() {
-    const {
-      obj: { next, operation, total },
-    } = this.state;
+    const object = this.state;
     return (
       <div className="container">
         <div className="calculator">
           <div className="input">
-            {next}
-            {operation}
-            {total}
+            {object.total}
+            {object.operation}
+            {object.next}
           </div>
           <div className="buttons">
             <button
               type="button"
               id="clear"
               name="AC"
-              onClick={this.handleOperator}
+              onClick={() => this.handleOperator('AC')}
             >
               AC
             </button>
-            <button type="button" name="+/-" onClick={this.handleOperator}>
+            <button
+              type="button"
+              name="+/-"
+              onClick={() => this.handleOperator('+/-')}
+            >
               +/-
             </button>
-            <button type="button" name="%" onClick={this.handleOperator}>
+            <button
+              type="button"
+              name="%"
+              onClick={() => this.handleOperator('%')}
+            >
               %
             </button>
-            <button type="button" name="/" onClick={this.handleOperator}>
-              &divide;
+            <button
+              type="button"
+              name="÷"
+              onClick={() => this.handleOperator('÷')}
+            >
+              ÷
             </button>
-            <button type="button" name="7" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="7"
+              onClick={() => this.handleOperator('7')}
+            >
               7
             </button>
-            <button type="button" name="8" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="8"
+              onClick={() => this.handleOperator('8')}
+            >
               8
             </button>
-            <button type="button" name="9" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="9"
+              onClick={() => this.handleOperator('9')}
+            >
               9
             </button>
-            <button type="button" name="x" onClick={this.handleOperator}>
+            <button
+              type="button"
+              name="x"
+              onClick={() => this.handleOperator('x')}
+            >
               x
             </button>
-            <button type="button" name="4" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="4"
+              onClick={() => this.handleOperator('4')}
+            >
               4
             </button>
-            <button type="button" name="5" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="5"
+              onClick={() => this.handleOperator('5')}
+            >
               5
             </button>
-            <button type="button" name="6" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="6"
+              onClick={() => this.handleOperator('6')}
+            >
               6
             </button>
-            <button type="button" name="-" onClick={this.handleOperator}>
+            <button
+              type="button"
+              name="-"
+              onClick={() => this.handleOperator('-')}
+            >
               -
             </button>
-            <button type="button" name="1" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="1"
+              onClick={() => this.handleOperator('1')}
+            >
               1
             </button>
-            <button type="button" name="2" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="2"
+              onClick={() => this.handleOperator('2')}
+            >
               2
             </button>
-            <button type="button" name="3" onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="3"
+              onClick={() => this.handleOperator('3')}
+            >
               3
             </button>
-            <button type="button" name="+" onClick={this.handleOperator}>
+            <button
+              type="button"
+              name="+"
+              onClick={() => this.handleOperator('+')}
+            >
               +
             </button>
             <button
               className="zero"
               name="0"
-              onClick={this.handleNumber}
+              onClick={() => this.handleOperator('0')}
               type="button"
             >
               0
             </button>
-            <button type="button" name="." onClick={this.handleNumber}>
+            <button
+              type="button"
+              name="."
+              onClick={() => this.handleOperator('.')}
+            >
               &bull;
             </button>
-            <button type="button" name="=" onClick={this.handleCalculate}>
+            <button
+              type="button"
+              name="="
+              onClick={() => this.handleOperator('=')}
+            >
               =
             </button>
           </div>
