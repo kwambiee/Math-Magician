@@ -1,6 +1,13 @@
 import React from 'react';
+import calculate from '../logic/calculate';
+
 // eslint-disable-next-line react/prefer-stateless-function
 class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { total: null, next: null, operation: null };
+    this.handleOperator = this.handleOperator.bind(this);
+  }
   render() {
     return (
       <div className="container">
