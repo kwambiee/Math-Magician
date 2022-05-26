@@ -3,172 +3,163 @@ import calculate from '../logic/calculate';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default function Calculator() {
+  const[state,setState]= useState({total:null,operation:null,next:null})
 
 
-   handleOperator(name) {
-    const object = this.state;
-    const result = calculate(object, name);
-    this.setState({ ...object, ...result });
+   handleOperator(buttonName) {
+    const object = state;
+    const result = calculate(object, buttonName);
+    setState({ ...object, ...result });
   }
 
-  return (
-    <div>calculator</div>
-  )
-}
-
-
-
-
- 
-
-render(){
-  const object = this.state;
-    return (
-      <div className="container">
-        <div className="calculator">
-          <div className="input">
-            {object.total}
-            {object.operation}
-            {object.next}
-          </div>
-          <div className="buttons">
-            <button
-              type="button"
-              id="clear"
-              name="AC"
-              onClick={() => this.handleOperator('AC')}
-            >
-              AC
-            </button>
-            <button
-              type="button"
-              name="+/-"
-              onClick={() => this.handleOperator('+/-')}
-            >
-              +/-
-            </button>
-            <button
-              type="button"
-              name="%"
-              onClick={() => this.handleOperator('%')}
-            >
-              %
-            </button>
-            <button
-              type="button"
-              name="÷"
-              onClick={() => this.handleOperator('÷')}
-            >
-              ÷
-            </button>
-            <button
-              type="button"
-              name="7"
-              onClick={() => this.handleOperator('7')}
-            >
-              7
-            </button>
-            <button
-              type="button"
-              name="8"
-              onClick={() => this.handleOperator('8')}
-            >
-              8
-            </button>
-            <button
-              type="button"
-              name="9"
-              onClick={() => this.handleOperator('9')}
-            >
-              9
-            </button>
-            <button
-              type="button"
-              name="x"
-              onClick={() => this.handleOperator('x')}
-            >
-              x
-            </button>
-            <button
-              type="button"
-              name="4"
-              onClick={() => this.handleOperator('4')}
-            >
-              4
-            </button>
-            <button
-              type="button"
-              name="5"
-              onClick={() => this.handleOperator('5')}
-            >
-              5
-            </button>
-            <button
-              type="button"
-              name="6"
-              onClick={() => this.handleOperator('6')}
-            >
-              6
-            </button>
-            <button
-              type="button"
-              name="-"
-              onClick={() => this.handleOperator('-')}
-            >
-              -
-            </button>
-            <button
-              type="button"
-              name="1"
-              onClick={() => this.handleOperator('1')}
-            >
-              1
-            </button>
-            <button
-              type="button"
-              name="2"
-              onClick={() => this.handleOperator('2')}
-            >
-              2
-            </button>
-            <button
-              type="button"
-              name="3"
-              onClick={() => this.handleOperator('3')}
-            >
-              3
-            </button>
-            <button
-              type="button"
-              name="+"
-              onClick={() => this.handleOperator('+')}
-            >
-              +
-            </button>
-            <button
-              className="zero"
-              name="0"
-              onClick={() => this.handleOperator('0')}
-              type="button"
-            >
-              0
-            </button>
-            <button
-              type="button"
-              name="."
-              onClick={() => this.handleOperator('.')}
-            >
-              &bull;
-            </button>
-            <button
-              type="button"
-              name="="
-              onClick={() => this.handleOperator('=')}
-            >
-              =
-            </button>
+  
+    const object = state;
+      return (
+        <div className="container">
+          <div className="calculator">
+            <div className="input">
+              {object.total}
+              {object.operation}
+              {object.next}
+            </div>
+            <div className="buttons">
+              <button
+                type="button"
+                id="clear"
+                name="AC"
+                onClick={() => handleOperator('AC')}
+              >
+                AC
+              </button>
+              <button
+                type="button"
+                name="+/-"
+                onClick={() => handleOperator('+/-')}
+              >
+                +/-
+              </button>
+              <button
+                type="button"
+                name="%"
+                onClick={() => handleOperator('%')}
+              >
+                %
+              </button>
+              <button
+                type="button"
+                name="÷"
+                onClick={() => handleOperator('÷')}
+              >
+                ÷
+              </button>
+              <button
+                type="button"
+                name="7"
+                onClick={() => handleOperator('7')}
+              >
+                7
+              </button>
+              <button
+                type="button"
+                name="8"
+                onClick={() => handleOperator('8')}
+              >
+                8
+              </button>
+              <button
+                type="button"
+                name="9"
+                onClick={() => handleOperator('9')}
+              >
+                9
+              </button>
+              <button
+                type="button"
+                name="x"
+                onClick={() => handleOperator('x')}
+              >
+                x
+              </button>
+              <button
+                type="button"
+                name="4"
+                onClick={() => handleOperator('4')}
+              >
+                4
+              </button>
+              <button
+                type="button"
+                name="5"
+                onClick={() => handleOperator('5')}
+              >
+                5
+              </button>
+              <button
+                type="button"
+                name="6"
+                onClick={() => handleOperator('6')}
+              >
+                6
+              </button>
+              <button
+                type="button"
+                name="-"
+                onClick={() => handleOperator('-')}
+              >
+                -
+              </button>
+              <button
+                type="button"
+                name="1"
+                onClick={() => handleOperator('1')}
+              >
+                1
+              </button>
+              <button
+                type="button"
+                name="2"
+                onClick={() => handleOperator('2')}
+              >
+                2
+              </button>
+              <button
+                type="button"
+                name="3"
+                onClick={() => handleOperator('3')}
+              >
+                3
+              </button>
+              <button
+                type="button"
+                name="+"
+                onClick={() => handleOperator('+')}
+              >
+                +
+              </button>
+              <button
+                className="zero"
+                name="0"
+                onClick={() => handleOperator('0')}
+                type="button"
+              >
+                0
+              </button>
+              <button
+                type="button"
+                name="."
+                onClick={() => handleOperator('.')}
+              >
+                &bull;
+              </button>
+              <button
+                type="button"
+                name="="
+                onClick={() => handleOperator('=')}
+              >
+                =
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    );
-  }
+      );
+}
