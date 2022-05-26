@@ -68,7 +68,11 @@ class Calculator extends React.Component {
     return (
       <div className="container">
         <div className="calculator">
-          <div></div>
+          <div className="input">
+            {this.state.obj.next}
+            {this.state.obj.operation}
+            {this.state.obj.total}
+          </div>
           <div className="buttons">
             <button
               type="button"

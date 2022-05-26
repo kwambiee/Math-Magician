@@ -17,7 +17,7 @@
   width: 400px;
 }
 
-input {
+.input {
   padding: 1rem;
   width: 100%;
   background-color: rgb(167, 164, 164);
@@ -26,10 +26,6 @@ input {
   text-align: end;
   color: white;
   font-weight: 500;
-}
-
-input[type='text'] {
-  color: #fff;
   font-size: 1rem;
 }
 
