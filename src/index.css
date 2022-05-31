@@ -82,6 +82,13 @@ button:active {
   color: #fff;
   text-decoration: none;
 }
+.navLink:hover {
+  display: inline-block;
+  color: gold;
+  transform: scale(0.9);
+  transform-origin: left;
+  text-decoration: underline;
+}
 span {
   border-right: 2px solid black;
   padding: 20px 10px 18px 0;
