@@ -9,9 +9,11 @@ import Quote from './pages/Quote';
 function App() {
   const CalcComponent = () => (
     <>
-      <div>
-        <h1>Lets do Some Maths</h1>
-        <Calculator />
+      <div className="calcPage">
+        <h1>Lets do Some Maths!</h1>
+        <div className="calcWrapper">
+          <Calculator className="calculate" />
+        </div>
       </div>
     </>
   );
