@@ -1,3 +1,4 @@
+/* eslint object-curly-newline: ["error", "never"] */
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Calculator from './components/calculator';
@@ -20,11 +21,19 @@ function App() {
       <Router>
         <nav className="navBar">
           <h1>Math Magicians</h1>
-          <Link to="/">Home</Link>
-          <Link to="/calculator">Calculator</Link>
-          <Link to="/quote">Quotes</Link>
+          <div className="navLinks">
+            <Link to="/" className="navLink">
+              <span>Home</span>
+            </Link>
+            <Link to="/calculator" className="navLink">
+              <span>Calculator</span>
+            </Link>
+            <Link to="/quote" className="navLink">
+              Quotes
+            </Link>
+          </div>
         </nav>
-        <div className="navLinks">
+        <div className="navRoutes">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/calculator" element={<CalcComponent />} />
