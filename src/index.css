@@ -1,16 +1,16 @@
 /* RESETS */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@500&display=swap');
 
 * {
-  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 .container {
   display: flex;
-  height: 100vh;
-  align-items: center;
   justify-content: center;
+  margin: 2.5rem;
 }
 
 .calculator {
@@ -20,12 +20,14 @@
 .input {
   padding: 1.4rem;
   width: 100%;
-  background-color: rgb(167, 164, 164);
-  border: none;
+  background-color: white;
+  border: 1px solid transparent;
   outline: none;
   text-align: end;
-  color: white;
+  color: black;
   font-weight: 500;
+  border-radius: 5px;
+  margin-bottom: 3px;
 }
 
 ::placeholder {
@@ -40,11 +42,12 @@
 .buttons button {
   padding: 1rem;
   width: 25%;
-  border-radius: 0;
-  background-color: rgba(233, 230, 230, 0.856);
+  background-color: black;
   border: 0.4px solid rgba(211, 209, 209, 0.973);
   font-weight: 500;
   font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
 }
 
 .buttons .zero {
@@ -57,4 +60,109 @@ button:nth-child(4n + 0) {
 
 button:nth-child(19) {
   background-color: rgba(255, 115, 0, 0.788);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem 1rem 1rem;
+  align-items: baseline;
+  background-color: #5f4c4c;
+  color: #fff;
+}
+
+.navBar h1 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.navLink {
+  padding-left: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  display: inline-block;
+  color: rgba(241, 75, 9, 0.986);
+  transform: scale(0.9);
+  transform-origin: left;
+  text-decoration: underline;
+}
+
+span {
+  border-right: 2px solid black;
+  padding: 20px 10px 18px 0;
+}
+
+.homePage h1 {
+  font-weight: bold;
+  margin: 1rem;
+  text-align: center;
+}
+
+.contWrapper {
+  width: 80%;
+  margin: 1rem auto;
+  letter-spacing: 0.1em;
+  padding: 1rem;
+  border: 3px solid rgb(229, 228, 226);
+}
+
+.calcPage {
+  display: flex;
+  margin: 2rem;
+  justify-content: space-between;
+}
+
+.calcPage h1 {
+  font-weight: bolder;
+  margin-right: 2rem;
+  flex: 1;
+  font-size: 72px;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 122, 89, 1),
+      rgba(255, 122, 89, 0.5)
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.calcWrapper {
+  width: 75%;
+  flex: 2;
+  background-image:
+    linear-gradient(
+      to right top,
+      #d16ba5,
+      #c777b9,
+      #ba83ca,
+      #aa8fd8,
+      #9a9ae1,
+      #8aa7ec,
+      #79b3f4,
+      #69bff8,
+      #52cffe,
+      #41dfff,
+      #46eefa,
+      #5ffbf1
+    );
+}
+
+.calculate {
+  margin: 0 auto;
+}
+
+.quotes p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  font-weight: bolder;
+  width: 70%;
+  margin: 1rem auto;
 }
