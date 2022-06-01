@@ -24,13 +24,21 @@ function App() {
         <nav className="navBar">
           <h1>Math Magicians</h1>
           <div className="navLinks">
-            <Link to="/" className="navLink">
+            <Link to="/" className="navLink" activeStyle={{ color: '#FFD700' }}>
               <span>Home</span>
             </Link>
-            <Link to="/calculator" className="navLink">
+            <Link
+              to="/calculator"
+              className="navLink"
+              activeStyle={{ color: '#FFD700' }}
+            >
               <span>Calculator</span>
             </Link>
-            <Link to="/quote" className="navLink">
+            <Link
+              to="/quote"
+              className="navLink"
+              activeStyle={{ color: '#FFD700' }}
+            >
               Quotes
             </Link>
           </div>
