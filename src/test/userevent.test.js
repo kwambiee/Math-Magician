@@ -1,8 +1,11 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 const Button = ({ onClick, children }) => (
-  <button onClick={onClick}>{children}</button>
+  <button type="button" onClick={onClick}>
+    {children}
+  </button>
 );
 
 test('calls onClick prop when clicked', () => {
