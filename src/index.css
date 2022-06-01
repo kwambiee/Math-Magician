@@ -124,11 +124,12 @@ span {
   margin-right: 2rem;
   flex: 1;
   font-size: 72px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 122, 89, 1),
-    rgba(255, 122, 89, 0.5)
-  );
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 122, 89, 1),
+      rgba(255, 122, 89, 0.5)
+    );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -136,21 +137,22 @@ span {
 .calcWrapper {
   width: 75%;
   flex: 2;
-  background-image: linear-gradient(
-    to right top,
-    #d16ba5,
-    #c777b9,
-    #ba83ca,
-    #aa8fd8,
-    #9a9ae1,
-    #8aa7ec,
-    #79b3f4,
-    #69bff8,
-    #52cffe,
-    #41dfff,
-    #46eefa,
-    #5ffbf1
-  );
+  background-image:
+    linear-gradient(
+      to right top,
+      #d16ba5,
+      #c777b9,
+      #ba83ca,
+      #aa8fd8,
+      #9a9ae1,
+      #8aa7ec,
+      #79b3f4,
+      #69bff8,
+      #52cffe,
+      #41dfff,
+      #46eefa,
+      #5ffbf1
+    );
 }
 
 .calculate {
