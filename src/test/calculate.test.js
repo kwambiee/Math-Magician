@@ -39,7 +39,7 @@ describe('test calculate function', () => {
     expect(result.total).toBe('2');
   });
 
-// Testing the reminder of  
+ 
   test('test remainder of two numbers', () => {
     let result = calculate(obj, '11');
     result = calculate(result, '%');

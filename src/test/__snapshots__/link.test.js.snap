@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly render Calculator page 1`] = `
+<a
+  activeStyle={
+    Object {
+      "color": "#ffd700",
+    }
+  }
+  className="navLink"
+  href="/calculator"
+  onClick={[Function]}
+>
+  <span>
+    Calculator
+  </span>
+</a>
+`;
+
+exports[`renders correctly render Homepage 1`] = `
+<a
+  activeStyle={
+    Object {
+      "color": "#ffd700",
+    }
+  }
+  className="navLink"
+  href="/"
+  onClick={[Function]}
+>
+  <span>
+    Home
+  </span>
+</a>
+`;
+
+exports[`renders correctly render Quote page 1`] = `
+<a
+  activeStyle={
+    Object {
+      "color": "#ffd700",
+    }
+  }
+  className="navLink"
+  href="/quote"
+  onClick={[Function]}
+>
+  Quotes
+</a>
+`;
