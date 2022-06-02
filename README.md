@@ -68,7 +68,7 @@ cd Math-Magician
 
 > npm test
 
-## Author
+## Authors
 
 👤 **Joy Kwamboka**
 
@@ -81,6 +81,12 @@ cd Math-Magician
 - GitHub: [@EidHachem](https://github.com/EidHachem)
 - Twitter: [@eidHachem1](https://twitter.com/@eidHachem1)
 - LinkedIn: [Eid Hachem](https://www.linkedin.com/in/eid-hachem/)
+
+👤 **Gideon Dadi**
+
+-Linkedin [@GideonDadi] (https://www.linkedin.com/feed/)
+- GitHub: [@gids_dadi](https://github.com/gids-dadi)
+- Twitter: [@Dadi_AG](https://twitter.com/Dadi_AG)
 
 ## 🤝 Contributing
 
