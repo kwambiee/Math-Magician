@@ -9,9 +9,23 @@
 
 ## Built With
 
-- React
-- JavaScript (ES6)
+- HTML
+
 - CSS
+
+- JavaScript
+
+- React JS
+
+- Webpack
+
+- Lighthouse (An open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more).
+
+- Webhint (A customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors).
+
+- Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
+
+- ESlint (A mighty, modern linter that helps you avoid errors and enforce conventions in JavaScript codes)
 
 ## Live Demo
 
@@ -44,14 +58,35 @@ cd Math-Magician
 
 - **Congrats!** you are now all set and simply run `npm start` to get your clone up and running on the browser.
 
-## Author
+## Run tests
+
+- **npx hint .** : To test html codes
+- **npx stylelint "**/\*.{css,scss}"\*\* : To test css code
+- **npx eslint .** : To test Eslint Report
+
+## to test the application
+
+> npm test
+
+## Authors
 
 👤 **Joy Kwamboka**
 
 - Github: [@kwambiee](https://github.com/kwambiee)
 - Twitter: [@kwambiee](https://twitter.com/kwambiee)
 - Linkedin: [Joy Kwamboka](https://www.linkedin.com/in/joy-kwamboka)
-- E-mail: kwambokaj2.jk@gmail.com
+
+👤 **Eid Hachem**
+
+- GitHub: [@EidHachem](https://github.com/EidHachem)
+- Twitter: [@eidHachem1](https://twitter.com/@eidHachem1)
+- LinkedIn: [Eid Hachem](https://www.linkedin.com/in/eid-hachem/)
+
+👤 **Gideon Dadi**
+
+-Linkedin [@GideonDadi] (https://www.linkedin.com/feed/)
+- GitHub: [@gids_dadi](https://github.com/gids-dadi)
+- Twitter: [@Dadi_AG](https://twitter.com/Dadi_AG)
 
 ## 🤝 Contributing
 
