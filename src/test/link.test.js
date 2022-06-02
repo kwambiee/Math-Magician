@@ -1,14 +1,15 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 describe('renders correctly', () => {
   test('render Homepage', () => {
     const tree = TestRenderer.create(
       <Router>
-        <Link to='/' className='navLink' activeStyle={{ color: '#ffd700' }}>
+        <Link to="/" className="navLink" activeStyle={{ color: '#ffd700' }}>
           <span>Home</span>
         </Link>
-      </Router>
+      </Router>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -16,13 +17,13 @@ describe('renders correctly', () => {
     const tree = TestRenderer.create(
       <Router>
         <Link
-          to='/calculator'
-          className='navLink'
+          to="/calculator"
+          className="navLink"
           activeStyle={{ color: '#ffd700' }}
         >
           <span>Calculator</span>
         </Link>
-      </Router>
+      </Router>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -30,13 +31,13 @@ describe('renders correctly', () => {
     const tree = TestRenderer.create(
       <Router>
         <Link
-          to='/quote'
-          className='navLink'
+          to="/quote"
+          className="navLink"
           activeStyle={{ color: '#ffd700' }}
         >
           Quotes
         </Link>
-      </Router>
+      </Router>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
