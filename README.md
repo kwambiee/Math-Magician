@@ -19,9 +19,15 @@
 - Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
 - ESlint (A mighty, modern linter that helps you avoid errors and enforce conventions in JavaScript codes)
 
+## ScreenShots
+
+![Home](/public/assets/home.png)
+![Calculator](/public/assets/calculator.png)
+![Quotes](/public/assets/quotes.png)
+
 ## Live Demo
 
-[Live Link](https://kwambiee.netlify.app/)
+[Live Link](https://kwambiee-math-magician.netlify.app/)
 
 ## Getting Started
 
@@ -77,6 +83,7 @@ cd Math-Magician
 👤 **Gideon Dadi**
 
 -Linkedin [@GideonDadi] (https://www.linkedin.com/feed/)
+
 - GitHub: [@gids_dadi](https://github.com/gids-dadi)
 - Twitter: [@Dadi_AG](https://twitter.com/Dadi_AG)
 

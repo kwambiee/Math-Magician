@@ -1,18 +1,23 @@
 /* eslint object-curly-newline: ["error", "never"] */
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Calculator from './components/calculator';
-import './App.css';
-import Home from './pages/Home';
-import Quote from './pages/Quote';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from "react-router-dom";
+import Calculator from "./components/calculator";
+import "./App.css";
+import Home from "./pages/Home";
+import Quote from "./pages/Quote";
 
 function App() {
   const CalcComponent = () => (
     <>
-      <div className="calcPage">
+      <div className='calcPage'>
         <h1>Lets do Some Maths!</h1>
-        <div className="calcWrapper">
-          <Calculator className="calculate" />
+        <div className='calcWrapper'>
+          <Calculator className='calculate' />
         </div>
       </div>
     </>
@@ -21,33 +26,36 @@ function App() {
   return (
     <div>
       <Router>
-        <nav className="navBar">
+        <nav className='navBar'>
           <h1>Math Magicians</h1>
-          <div className="navLinks">
-            <Link to="/" className="navLink" activeStyle={{ color: '#FFD700' }}>
+          <div className='navLinks'>
+            <NavLink
+              to='/'
+              className={(navlink) =>
+                navlink.isActive ? "active" : "notActive"
+              }
+            >
               <span>Home</span>
-            </Link>
-            <Link
-              to="/calculator"
-              className="navLink"
-              activeStyle={{ color: '#FFD700' }}
+            </NavLink>
+            <NavLink
+              to='/calculator'
+              className={(link) => (link.isActive ? "active" : "notActive")}
             >
               <span>Calculator</span>
-            </Link>
-            <Link
-              to="/quote"
-              className="navLink"
-              activeStyle={{ color: '#FFD700' }}
+            </NavLink>
+            <NavLink
+              to='/quote'
+              className={(link) => (link.isActive ? "active" : "notActive")}
             >
               Quotes
-            </Link>
+            </NavLink>
           </div>
         </nav>
-        <div className="navRoutes">
+        <div className='navRoutes'>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/calculator" element={<CalcComponent />} />
-            <Route path="/quote" element={<Quote />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/calculator' element={<CalcComponent />} />
+            <Route path='/quote' element={<Quote />} />
           </Routes>
         </div>
       </Router>
